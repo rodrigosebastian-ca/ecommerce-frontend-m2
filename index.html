@@ -4,319 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Agua Purificada Ancestral</title>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-  <div class="container-fluid">
-    <a id="inicio" href="#inicio" class="navbar-brand fw-bold"> 💧 Agua Purificada Ancestral</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info"> 
+    <div class="container-fluid">
+      <a id="inicio" href="#inicio" class="navbar-brand fw-bold"> 💧 Agua Purificada Ancestral</a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" 
+              aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="menu">
-
-    <ul class="navbar-nav ms-auto">
-     <li class="nav-item"><a class="nav-link text-white" href="#seccion-promociones1">PROMOCIONES</a></li>
-     <li class="nav-item"><a class="nav-link text-white" href="#seccion-dispensadores1">DISPENSADORES</a></li>
-     <li class="nav-item"><a class="nav-link text-white" href="#seccion-como-comprar1">COMO COMPRAR</a></li>
-     <li class="nav-item"><a class="nav-link text-white" href="#seccion-sobre-nosotros1">SOBRE NOSOTROS</a></li>
-    </ul>
-
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto align-items-center">
+          <li class="nav-item"><a class="nav-link text-white" href="#seccion-promociones1">PROMOCIONES</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#seccion-botellones1">BOTELLONES</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#seccion-dispensadores1">DISPENSADORES</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#seccion-como-comprar1">COMO COMPRAR</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#seccion-sobre-nosotros1">SOBRE NOSOTROS</a></li>
+        </ul>
 
 <!-- CARRITO -->
 
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link text-white" href="#seccion-promociones1">COMPRAS</a></li>
-      <li class="nav-item">
-        <span class="nav-link text-white fw-bold">
-        🛒 <span id="suma-del-carrito">0</span>
-        </span>
-       </li>
-    </ul>
+        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center justify-content-center">
+          <li class="nav-item me-2">
+            <span class="nav-link text-white">COMPRAS</span>
+          </li>
+          <li class="nav-item">
+              <span class="nav-link text-white fw-bold">
+              🛒<span id="suma-del-carrito">0</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-   
+  <div class="container-fluid p-0 mb-5" style="max-height: 400px; overflow: hidden;">
+    <img src="./assets/img/Portada_Ancestral.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Imagen portada ancestral">
   </div>
- </div>
-</nav>
+</header>
 
-<div class="container-fluid p-0 mb-5" 
-     style="max-height: 400px; overflow: hidden;">
-  <img src="./assets/img/Portada_Ancestral.png" 
-       class="img-fluid w-100 h-100 object-fit-cover" 
-       alt="IMAGEN_PORTADA_ANCESTRAL">
-</div>
+<main>
 
-    <header>
-     
-    </header>
-
-    <main>
-
+<!-- PROMOCIONES -->
+<section id="seccion-promociones1">
+<h2 class="visually-hidden">PROMOCIONES</h2>
 <div class="container">
   <div class="row">
-
-          <!-- PROMOCIONES -->
-       
-         <div class="col-md-6 mb-3" id="seccion-promociones1">
-          <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Promocion1.png" 
-          alt="IMAGEN_PROMOCION_1" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-            <div class="card-body text-center"> <h2 class="card-title">Promoción KIT</h2>
-             <p class="card-text">Promocion de 1 botellón + dispensador a $14.000 <br>
-             Promoción de 2 botellones + dispensador a $19.000</p> <br>
-              <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-           </div>
+    <article class="col-md-6 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/Promocion1.png" alt="Imagen promoción 1" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">Promoción KIT</h3>
+            <p class="card-text">Promocion de 1 botellón + dispensador a $14.000 <br>
+                                 Promoción de 2 botellones + dispensador a $19.000</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$14.000</button>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$19.000</button>
           </div>
+        </div>
+    </article>
         
-
        
-         <div class="col-md-6 mb-3" id="seccion-promociones2">
-           <div class="card h-100 shadow-sm bg-light"> 
-             <img src="./assets/img/Promocion2.png" 
-                  alt="IMAGEN_PROMOCION_2" 
-                  class="mx-auto d-block mt-3 rounded shadow img-fluid"
-                  style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-              <div class="card-body text-center"> 
-                <h2 class="card-title">Promoción Recargas</h2>
-                  <p class="card-text">Tenemos operativas las promociones de recarga a domicilio <br>
-                                2 recargas por $7.000 sin costo a domicilio <br>
-                                3 recargas por $9.000 sin costo a domicilio
-                  </p>
-                <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito</button>
-              </div>
-            </div>
+    <article class="col-md-6 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/Promocion2.png" alt="Imagen promoción 2" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">Promoción Recargas</h3>
+            <p class="card-text">2 recargas por $7.000 sin costo a domicilio <br>
+                                 3 recargas por $9.000 sin costo a domicilio</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$7.000</button>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$9.000</button>
           </div>
-      
+      </div>
+    </article>      
   </div>
 </div>
-
-
+</section>
 
 <!-- COMPRAS UNITARIAS -->
 
+<section id="seccion-botellones1">
+<h2 class="visually-hidden">BOTELLONES</h2>
 <div class="container">
-<div class="row">
-       
-         <div class="col-md-4 mb-3" id="compra_unitaria1">
-          <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador1.png" 
-          alt="IMAGEN_DISPENSADOR_1" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-            <div class="card-body text-center"> <h2 class="card-title">Dispensador básico pedestal</h2>
-             <p class="card-text">Dispensador básico de pedestal, sin necesidad de batería o gasto de luz.</p>
-              <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-            </div>
-           </div>
+  <div class="row">
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/1Botellon.png" alt="Imagen de botellones 1" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">1 Botellon</h3>
+            <p class="card-text">Consta por la compra de 1 botellon más la recarga</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$9.000</button>
           </div>
-        
-
-       
-         <div class="col-md-4 mb-3" id="compra_unitaria2">
-          <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador2.png" 
-          alt="IMAGEN_DISPENSADOR_2" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-           <div class="card-body text-center"> <h2 class="card-title">Dispensador frio y caliente</h2>
-           <p class="card-text">Dispensador eléctrico para agua fría y agua caliente. Necesita estar enchufa a corriente electrica para su funcionamiento.</p>
-           <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-           </div>
+      </div>
+    </article>
+  
+          
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/2Botellones.png" alt="Imagen de botellones 2" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">2 Botellones</h3>
+            <p class="card-text">Consta por la compra de 2 botellones más la recarga</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$18.000</button>
           </div>
         </div>
+    </article>
+    
       
 
-<div class="col-md-4 mb-3" id="compra_unitaria3">
-  <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador3.png" 
-         alt="IMAGEN_DISPENSADOR_3" 
-         class="mx-auto d-block mt-3 rounded shadow img-fluid"
-         style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-
-    <div class="card-body text-center"> <h2 class="card-title">Dispensador de cerámica con diseño</h2>
-      <p class="card-text">Dispensador material cerámico, entrega agua temperatura ambiente.</p>
-      <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-    </div>
-  </div>
-</div>
-
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/3Botellones.png" alt="Imagen de botellones 3" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">3 Botellones</h3>
+            <p class="card-text">Consta por la compra de 3 botellones más la recarga</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$27.000</button>
+          </div>
+      </div>
+    </article>
 </div>
 </div>
-
-<!-- COMO COMPRAR-->
-
-<div class="container">
-<div class="row">
-
-  <div class="col-md-6 mb-3" id="seccion-como-comprar1">
-   <div class="card h-100 shadow-sm"> 
-    <img src="./assets/img/Como_comprar1.png" 
-         alt="IMAGEN_COMO_COMPRAR_1" 
-         class="card-img-top object-fit-cover"> 
-    </div>
-   </div>
-        
-
- <div class="col-md-6 mb-3" id="seccion-como-comprar2">
-  <div class="card h-100 shadow-sm"> 
-    <img src="./assets/img/Como_comprar2.png" 
-         alt="IMAGEN_COMO_COMPRAR_2" 
-         class="card-img-top img-fluid">
-        
-  </div>
- </div>
-</div>
-</div>
-
-
-
+</section>
 
 <!-- DISPENSADORES -->
 
+<section id="seccion-dispensadores1">
+<h2 class="visually-hidden">DISPENSADORES</h2>
 <div class="container">
-<div class="row">
-       
-         <div class="col-md-4 mb-3" id="seccion-dispensadores1">
-          <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador1.png" 
-          alt="IMAGEN_DISPENSADOR_1" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-            <div class="card-body text-center"> <h2 class="card-title">Dispensador básico pedestal</h2>
-             <p class="card-text">Dispensador básico de pedestal, sin necesidad de batería o gasto de luz.</p>
-              <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-            </div>
-           </div>
+  <div class="row">
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/Dispensador1.png" alt="Imagen dispensador 1" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">Dispensador básico plástico</h3>
+            <p class="card-text">Dispensador básico, sin necesidad de batería o gasto de luz.</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$11.990</button>
           </div>
+      </div>
+    </article>
         
 
-       
-         <div class="col-md-4 mb-3" id="seccion-dispensadores2">
-          <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador2.png" 
-          alt="IMAGEN_DISPENSADOR_2" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-           <div class="card-body text-center"> <h2 class="card-title">Dispensador frio y caliente</h2>
-           <p class="card-text">Dispensador eléctrico para agua fría y agua caliente. Necesita estar enchufa a corriente electrica para su funcionamiento.</p>
-           <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-           </div>
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light">
+        <img src="./assets/img/Dispensador2.png" alt="Imagen dispensador 2" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center"> 
+            <h3 class="card-title">Dispensador frío y caliente</h3>
+            <p class="card-text">Dispensador eléctrico para agua fría-caliente. Necesita corriente electrica para su funcionamiento.</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$39.990</button>
           </div>
-        </div>
+      </div>
+    </article>
       
 
-<div class="col-md-4 mb-3" id="seccion-dispensadores3">
-  <div class="card h-100 shadow-sm bg-light"> <img src="./assets/img/Dispensador3.png" 
-         alt="IMAGEN_DISPENSADOR_3" 
-         class="mx-auto d-block mt-3 rounded shadow img-fluid"
-         style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
-
-    <div class="card-body text-center"> <h2 class="card-title">Dispensador de cerámica con diseño</h2>
-      <p class="card-text">Dispensador material cerámico, entrega agua temperatura ambiente.</p>
-      <a href="#seccion-dispensadores" class="btn btn-primary">Ir a tal lugar</a>
-    </div>
-  </div>
+    <article class="col-md-4 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/Dispensador3.png" alt="Imagen dispensador 3" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="width: 400px; max-width: 90%; height: 300px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h3 class="card-title">Dispensador de cerámica</h3>
+            <p class="card-text">Dispensador material cerámico, entrega agua temperatura ambiente.</p>
+            <button onclick="agregarProducto()" class="btn btn-primary">Agregar al carrito <br>$29.990</button>
+          </div>
+      </div>
+    </article>
+  </div>  
 </div>
-
-</div>
-</div>
+</section>
 
 <!-- COMO COMPRAR-->
 
-<div class="container">
-<div class="row">
+<section id="seccion-como-comprar1">
+  <h2 class="visually-hidden">COMO COMPRAR</h2>
+  <div class="container">
+    <div class="row">
+      <article class="col-md-6 mb-3">
+      <h3 class="visually-hidden">Instrucciones de como comprar 1</h3>
+        <div class="card h-100 shadow-sm"> 
+          <img src="./assets/img/Como_comprar1.png" alt="Imagen como comprar 1" class="card-img-top img-fluid object-fit-cover"> 
+        </div>
+      </article>
+        
 
-  <div class="col-md-6 mb-3" id="seccion-como-comprar1">
-   <div class="card h-100 shadow-sm"> 
-    <img src="./assets/img/Como_comprar1.png" 
-         alt="IMAGEN_COMO_COMPRAR_1" 
-         class="card-img-top object-fit-cover"> 
+      <article class="col-md-6 mb-3">
+      <h3 class="visually-hidden">Instrucciones de como comprar 2</h3>
+        <div class="card h-100 shadow-sm"> 
+          <img src="./assets/img/Como_comprar2.png" alt="Imagen como comprar 2" class="card-img-top img-fluid object-fit-cover">
+        </div>
+      </article>
     </div>
-   </div>
-        
-
- <div class="col-md-6 mb-3" id="seccion-como-comprar2">
-  <div class="card h-100 shadow-sm"> 
-    <img src="./assets/img/Como_comprar2.png" 
-         alt="IMAGEN_COMO_COMPRAR_2" 
-         class="card-img-top img-fluid">
-        
   </div>
- </div>
-</div>
-</div>
-      
+</section>
 
 <!-- SOBRE NOSOTROS-->
 
+<section id="seccion-sobre-nosotros1">
+<h2 class="visually-hidden">SOBRE NOSOTROS</h2>
 <div class="container">
-<div class="row">
-       
-         <div class="col-md-12 mb-3" id="seccion-sobre-nosotros1">
-          <div class="card h-100 shadow-sm bg-light"> 
-          <img src="./assets/img/Sobre_nosotros.png" 
-          alt="IMAGEN_SOBRE_NOSOTROS_1" 
-          class="mx-auto d-block mt-3 rounded shadow img-fluid"
-          style="max-width: 90%; height: 300px; object-fit: cover;">
-            <div class="card-body text-center"> 
-             <h2 class="card-title">Sobre nosotros</h2>
-             <p class="card-text">
-              En el corazón de una familia que valora el bienestar y la pureza, nació Agua Purificada Ancestral. Lo que comenzó hace más de cinco años como un pequeño proyecto local, hoy se ha consolidado como un pilar fundamental para cientos de hogares y empresas que buscan algo más que solo hidratarse: buscan calidad de vida. <br>
-              <br>
+  <div class="row">
+    <article class="col-md-12 mb-3">
+      <div class="card h-100 shadow-sm bg-light"> 
+        <img src="./assets/img/Sobre_nosotros.png" alt="Imagen sobre nosotros" class="mx-auto d-block mt-3 rounded shadow img-fluid" style="max-width: 90%; height: 300px; object-fit: cover;">
+        <div class="card-body text-center"> 
+          <h3 class="card-title">Sobre nosotros</h3>
+          <p class="card-text">
+          En el corazón de una familia que valora el bienestar y la pureza, nació Agua Purificada Ancestral. Lo que comenzó hace más de cinco años como un pequeño proyecto local, hoy se ha consolidado como un pilar fundamental para cientos de hogares y empresas que buscan algo más que solo hidratarse: buscan calidad de vida. <br>
+          <br>
 
-              <strong>Una Tradición de Confianza en Osorno</strong> <br>
-              Desde nuestros primeros días en Osorno, entendimos que el agua es el motor de cada familia. Por ello, hemos dedicado cada año a perfeccionar nuestros procesos de purificación, asegurando que cada bidón que llega a tu domicilio mantenga los más altos estándares de frescura y pureza. Nuestra sucursal y nuestro servicio de entrega personalizada son el reflejo de nuestro compromiso con la puntualidad y el trato cercano que solo una empresa familiar puede brindar. <br>
-              <br>
+          <strong>Una Tradición de Confianza en Osorno</strong> <br>
+          Desde nuestros primeros días en Osorno, entendimos que el agua es el motor de cada familia. Por ello, hemos dedicado cada año a perfeccionar nuestros procesos de purificación, asegurando que cada bidón que llega a tu domicilio mantenga los más altos estándares de frescura y pureza. Nuestra sucursal y nuestro servicio de entrega personalizada son el reflejo de nuestro compromiso con la puntualidad y el trato cercano que solo una empresa familiar puede brindar. <br>
+          <br>
 
-              <strong>Hidratando Sueños y Empresas</strong> <br>
-              No solo entregamos agua; entregamos la tranquilidad de saber que estás consumiendo lo mejor. Durante este lustro, hemos tenido el honor de acompañar el crecimiento de empresas locales y el día a día de las familias osorninas, convirtiéndonos en un aliado silencioso pero vital en su nutrición diaria. <br>
-              <br>
+          <strong>Hidratando Sueños y Empresas</strong> <br>
+          No solo entregamos agua; entregamos la tranquilidad de saber que estás consumiendo lo mejor. Durante este lustro, hemos tenido el honor de acompañar el crecimiento de empresas locales y el día a día de las familias osorninas, convirtiéndonos en un aliado silencioso pero vital en su nutrición diaria. <br>
+          <br>
 
-              <strong>El Próximo Horizonte: La Araucanía</strong> <br>
-              Nuestra pasión por llevar pureza a cada rincón no se detiene. Estamos emocionados de compartir que estamos a solo un paso de cruzar fronteras regionales. Muy pronto, nuestra familia crecerá para llegar a la Novena Región, llevando la calidad que nos caracteriza a nuevos hogares. <br>
-              <br>
+          <strong>El Próximo Horizonte: La Araucanía</strong> <br>
+          Nuestra pasión por llevar pureza a cada rincón no se detiene. Estamos emocionados de compartir que estamos a solo un paso de cruzar fronteras regionales. Muy pronto, nuestra familia crecerá para llegar a la Novena Región, llevando la calidad que nos caracteriza a nuevos hogares. <br>
+          <br>
 
-             <strong>¡El futuro se ve claro y refrescante! Estamos listos para seguir creciendo junto a ti.</strong>
-             </p>
-              <a href="#inicio" class="btn btn-primary">Inicio</a>
-            </div>
-           </div>
-          </div>
-         
+          <strong>¡El futuro se ve claro y refrescante! Estamos listos para seguir creciendo junto a ti.</strong>
+          </p>
+          <a href="#inicio" class="btn btn-primary">Inicio</a>
+        </div>
+      </div>
+    </article>         
+  </div>
 </div>
-
-  
-  
-  </main>
-
-
-    
-
-
-
-
-
-
-    
+</section>
+</main>
 
 
 <footer class="mt-auto bg-info text-light text-center py-3">
   <small class="d-block">
     &COPY; 2026 Agua Purificada Ancestral | Despacho a domicilio 24 hrs. <br>
+    Osorno, X Región de Los Lagos <br>
     Todos los derechos reservados. <br>
-    Osorno X Región de Los Lagos <br>
-    Desarrollado por Rodrigo Cárcamo A.
+    Desarrollado por Rodrigo Cárcamo A. 
   </small>
 </footer>
 
 <script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.7.1.min.js" 
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+  crossorigin="anonymous">
+</script>
 
 <script 
-src="https://code.jquery.com/jquery-3.7.1.min.js" 
-integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-crossorigin="anonymous">
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+  crossorigin="anonymous">
 </script>
-<script src="./assets/js/script.js"></script>
+
+<script 
+src="./assets/js/script.js">
+</script>
 
 </body>
 </html>
